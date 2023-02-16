@@ -3,6 +3,7 @@ package com.example.database.database;
 import com.example.database.repository.RepoUser;
 import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Component;
+import com.example.database.utils.BlogFactory;
 
 @Component
 public class dbInit {
@@ -12,9 +13,9 @@ public class dbInit {
         this.repoUser = repoUser;
     }
 
-//    @PostConstruct
-//    public void init(){
-//        repoUser.USERS.forEach(repoUser::save);
-//        repoUser.save(null);
-//    }
+    @PostConstruct
+    public void init(){
+        BlogFactory.BLOG_USERS.forEach(repoUser::save);
+        repoUser.save(null);
+    }
 }
