@@ -6,10 +6,7 @@ import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
-import lombok.Data;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -19,6 +16,7 @@ import java.util.stream.Collector;
 @Entity
 @Table(name = "post")
 @Getter @Setter
+@ToString
 public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -33,6 +31,7 @@ public class Post {
     @JoinColumn(name = "user_id")
     private User user;
     @OneToMany(mappedBy = "post", cascade = {CascadeType.ALL}, fetch = FetchType.LAZY)
+
     private List<Comment> comments;
 
     public Post(){}

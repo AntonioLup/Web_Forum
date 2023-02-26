@@ -12,13 +12,14 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/auth")
+@CrossOrigin("*")
 public class AuthController {
     private final AuthService authService;
     @Autowired
     public AuthController(AuthService authService) {
         this.authService = authService;
     }
-
+// ResponseEntity una emboltura que controla nuestro codigo
     @PostMapping(value = "/login")
     public ResponseEntity<JsonNode> login(@RequestBody AuthRequest loginRequest)
             throws Exception{

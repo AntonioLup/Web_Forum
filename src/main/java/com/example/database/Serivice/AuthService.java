@@ -39,10 +39,7 @@ public class AuthService  {
 
 
 
-    public Optional<User> getBlogUser(){
-        String blogUser = SecurityContextHolder.getContext().getAuthentication().getName();
-        return repoUser.findByUserName(blogUser);
-    }
+
 
     public boolean signup(AuthRequest authRequest) {
         User blogUser = this.mapToBlogUser(authRequest);
@@ -110,5 +107,9 @@ public class AuthService  {
     public Optional<User> getUser() {
         String userName = SecurityContextHolder.getContext().getAuthentication().getName();
         return repoUser.findByUserName(userName);
+    }
+    public Optional<User> getBlogUser(){
+        String blogUser = SecurityContextHolder.getContext().getAuthentication().getName();
+        return repoUser.findByUserName(blogUser);
     }
 }

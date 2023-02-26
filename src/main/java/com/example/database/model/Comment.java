@@ -21,6 +21,7 @@ public class Comment {
     @JoinColumn(name = "user_id")
     private User user;
     @ManyToOne(cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
+
     @JoinColumn(name = "post_id")
     private Post post;
 
