@@ -1,4 +1,8 @@
 # Backend Web Forum
+
+Video Web:
+https://youtu.be/AshNwH_3GtY
+
 ## Request Articles (get, post, put, delete)
 
 to get a response in this api you need Postman, so we can start
