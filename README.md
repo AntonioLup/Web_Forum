@@ -38,4 +38,6 @@ Backend:
 Spring Boot 3.0.2, jpa, security, jwt
 FrontEnd:
 React Js
+DB:
+MySQL
 
