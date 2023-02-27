@@ -32,3 +32,10 @@ Method: POST, Request: http://localhost:8080/api/auth/signup
 
 then to access your articles with the POST method you will need your JWT
     Bearer: "JWT" implement
+    
+## Tech Stack:
+Backend:
+Spring Boot 3.0.2, jpa, security, jwt
+FrontEnd:
+React Js
+
